@@ -1,11 +1,6 @@
 <template>
-  <v-app>
-    <v-app-bar app color="blue-grey lighten-3" class="d-flex justify-center">
-      <v-toolbar-title>
-        <h3 style="color: #b71c1c">{{ title }}</h3>
-      </v-toolbar-title>
-    </v-app-bar>
-
+  <v-app :style="{background: '#212121'}"> 
+    <Bar />
     <v-main>
       <Pokemons />
     </v-main>
@@ -13,14 +8,13 @@
 </template>
 
 <script>
-import Pokemons from "./components/Pokemons.vue"
+import Pokemons from "./components/Pokemons.vue";
+import Bar from "./components/Bar.vue";
 export default {
   name: "App",
-  components:{
-    Pokemons
+  components: {
+    Pokemons,
+    Bar,
   },
-  data: () => ({
-    title: "Pokedex",
-  }),
 };
 </script>
